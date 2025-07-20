@@ -1,0 +1,110 @@
+name: mindoro
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.1
+  shared_preferences: ^2.2.3
+  provider: ^6.0.0
+  http_parser: ^4.0.0
+  dio: ^5.4.0
+  dio_smart_retry: ^7.0.1
+  cupertino_icons: ^1.0.8
+  smooth_page_indicator: ^1.2.1
+  flutter_map: ^8.1.1
+  image_picker: ^1.1.2
+  mime: ^2.0.0
+  camera: ^0.10.3
+  image: ^4.0.13
+  google_nav_bar: ^5.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.6
+  build_web_compilers: ^4.0.6
+  flutter_launcher_icons: ^0.13.1
+
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: VisbyRoundCF
+      fonts:
+        # ExtraLight (Weight 200)
+        - asset: assets/fonts/VisbyRoundCF-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/VisbyRoundCF-ExtraLightOblique.ttf
+          weight: 200
+          style: italic
+
+        # Light (Weight 300)
+        - asset: assets/fonts/VisbyRoundCF-Light.ttf
+          weight: 300
+        - asset: assets/fonts/VisbyRoundCF-LightOblique.ttf
+          weight: 300
+          style: italic
+
+        # Regular (Weight 400)
+        - asset: assets/fonts/VisbyRoundCF-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/VisbyRoundCF-RegularOblique.ttf
+          weight: 400
+          style: italic
+
+        # Medium (Weight 500)
+        - asset: assets/fonts/VisbyRoundCF-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/VisbyRoundCF-MediumOblique.ttf
+          weight: 500
+          style: italic
+
+        # DemiBold (Weight 600)
+        - asset: assets/fonts/VisbyRoundCF-DemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/VisbyRoundCF-DemiBoldOblique.ttf
+          weight: 600
+          style: italic
+
+        # Bold (Weight 700)
+        - asset: assets/fonts/VisbyRoundCF-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/VisbyRoundCF-BoldOblique.ttf
+          weight: 700
+          style: italic
+
+        # ExtraBold (Weight 800)
+        - asset: assets/fonts/VisbyRoundCF-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/VisbyRoundCF-ExtraBoldOblique.ttf
+          weight: 800
+          style: italic
+          
+        # Heavy (Weight 900)
+        - asset: assets/fonts/VisbyRoundCF-Heavy.ttf
+          weight: 900
+        - asset: assets/fonts/VisbyRoundCF-HeavyOblique.ttf
+          weight: 900
+          style: italic
