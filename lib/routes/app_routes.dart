@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindoro/views/autentikasi/personalisasi_screen.dart';
-import 'package:mindoro/views/autentikasi/registrasi_screen.dart';
+import 'package:mindoro/views/autentikasi/registrasi_flow_screen.dart';
 import 'package:mindoro/views/autentikasi/welcome_screen.dart';
 import 'package:mindoro/views/home/home_screen.dart';
 import 'package:mindoro/views/game/game_screen.dart';
@@ -15,7 +15,7 @@ import './name_routes.dart';
 class AppRoutes {
   static final Map<String, WidgetBuilder> routes = {
     RouteNames.personal: (context) => const PersonalisasiScreen(),
-    RouteNames.regis: (context) => const RegistrasiScreen(), // Jika ada
+    RouteNames.regisflow: (context) => const RegistrationFlowScreen(), // Jika ada
     RouteNames.home: (context) => const HomeScreen(),
     RouteNames.welcome: (context) => const WelcomeScreen(),
     RouteNames.game: (context) => const GameScreen(),

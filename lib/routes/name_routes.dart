@@ -1,6 +1,6 @@
 class RouteNames {
   static const String welcome = '/welcome'; // Rute awal Anda
-  static const String regis = '/register'; // Jika ada halaman registrasi
+  static const String regisflow = '/regis_flow'; // Jika ada halaman registrasi
   static const String home = '/'; // Untuk Beranda (HomeScreen)
   static const String personal = '/personal'; // Untuk Artikel (ArtikelScreen)
   static const String game ='/game'; // Rute untuk 'Laporkan' (sesuai di FloatingNavigationBar)                                       // Anda bisa mengganti '/style-me' menjadi '/laporkan' jika lebih intuitif

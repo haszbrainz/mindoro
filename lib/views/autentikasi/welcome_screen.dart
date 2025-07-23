@@ -52,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // LOGIKA NAVIGASI DITAMBAHKAN DI SINI
-                      Navigator.pushNamed(context, '/registrasi');
+                      Navigator.pushNamed(context, '/regis_flow');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: CustomColors.blue600,
