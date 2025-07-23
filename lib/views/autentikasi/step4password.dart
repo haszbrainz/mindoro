@@ -16,19 +16,19 @@ class Step4password extends StatelessWidget {
     final viewModel = context.read<RegistrationViewModel>();
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 32),
-          Text('Berapa umurmu?', style: CustomTextStyles.bold3xl),
-          const SizedBox(height: 24),
+          const SizedBox(height: 8),
+          Text('Konfirmasi kata sandimu', style: CustomTextStyles.bold2xl),
+          const SizedBox(height: 16),
           TextFormField(
             onChanged: (value) => viewModel.age = value, // Simpan umur ke ViewModel
             decoration: InputDecoration(
               hintText: '14',
               filled: true,
-              fillColor: CustomColors.slate100.withOpacity(0.5),
+              fillColor: CustomColors.slate50,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16.0),
                 borderSide: BorderSide.none,
