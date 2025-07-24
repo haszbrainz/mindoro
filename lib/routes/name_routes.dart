@@ -10,6 +10,8 @@ class RouteNames {
   static const String loading = '/loading'; // Untuk halaman 'Edit Profil' (EditProfileScreen)
   static const String splash = '/splash'; 
   static const String login = '/login'; // Untuk halaman 'Login' (LoginScreen)
+  static const String personalizationIntro = '/personalization_intro'; // Untuk halaman intro personalisasi
+  static const String personalizationFlow = '/personalization_flow'; // Untuk alur personalisasi
   // Tambahkan nama rute lain jika ada
 }
 

@@ -69,11 +69,8 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-
-              // Tombol "Saya sudah punya akun"
               TextButton(
                 onPressed: () {
-                  // LOGIKA NAVIGASI DITAMBAHKAN DI SINI
                   Navigator.pushNamed(context, '/login');
                 },
                 child: Text(

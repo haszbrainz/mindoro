@@ -20,7 +20,7 @@ class PersonalisasiScreen extends StatelessWidget {
           // Column menata widget anaknya secara vertikal (dari atas ke bawah).
           mainAxisAlignment: MainAxisAlignment.center, // Pusatkan secara vertikal
           children: <Widget>[
-            // Widget untuk menampilkan teks.
+       
             const Text(
               'Selamat Datang di Flutter!',
               style: TextStyle(

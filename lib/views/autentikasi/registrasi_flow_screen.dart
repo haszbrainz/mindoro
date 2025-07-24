@@ -10,14 +10,28 @@ import 'package:mindoro/views/autentikasi/step2name.dart';
 import 'package:mindoro/views/autentikasi/step3email.dart';
 import 'package:mindoro/views/autentikasi/step4password.dart';
 
-class RegistrationFlowScreen extends StatefulWidget {
+class RegistrationFlowScreen extends StatelessWidget {
   const RegistrationFlowScreen({super.key});
 
   @override
-  State<RegistrationFlowScreen> createState() => _RegistrationFlowScreenState();
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (_) => RegistrationViewModel(),
+      child: const _RegistrationFlowScreenBody(),
+    );
+  }
 }
 
-class _RegistrationFlowScreenState extends State<RegistrationFlowScreen> {
+class _RegistrationFlowScreenBody extends StatefulWidget {
+  const _RegistrationFlowScreenBody();
+
+  @override
+  State<_RegistrationFlowScreenBody> createState() =>
+      _RegistrationFlowScreenBodyState();
+}
+
+class _RegistrationFlowScreenBodyState
+    extends State<_RegistrationFlowScreenBody> {
   final PageController _pageController = PageController();
 
   @override
@@ -28,7 +42,6 @@ class _RegistrationFlowScreenState extends State<RegistrationFlowScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Dengarkan perubahan pada ViewModel
     final viewModel = context.watch<RegistrationViewModel>();
 
     return Scaffold(
