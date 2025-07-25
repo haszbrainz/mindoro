@@ -1,10 +1,9 @@
-// lib/views/registration_steps/step_1_age.dart
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:mindoro/viewmodels/registrasi_vm.dart ';
+import 'package:mindoro/viewmodels/registrasi_vm.dart';
 import 'package:mindoro/themes/custom_colors.dart';
 import 'package:mindoro/themes/custom_text_styles.dart';
+import 'package:mindoro/routes/name_routes.dart'; // 1. Import name_routes
 
 class Step4password extends StatelessWidget {
   final PageController pageController;
@@ -21,29 +20,37 @@ class Step4password extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 8),
-          Text('Konfirmasi kata sandimu', style: CustomTextStyles.bold2xl),
+          Text('Buat kata sandi yang aman', style: CustomTextStyles.bold2xl),
           const SizedBox(height: 16),
           TextFormField(
-            onChanged: (value) => viewModel.age = value, // Simpan umur ke ViewModel
+            onChanged: (value) => viewModel.password = value, // Simpan ke viewModel.password
+            obscureText: true, // Sembunyikan input password
             decoration: InputDecoration(
-              hintText: '14',
+              hintText: '∗∗∗∗∗∗∗∗∗∗∗∗∗∗',
               filled: true,
               fillColor: CustomColors.slate50,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16.0),
                 borderSide: BorderSide.none,
               ),
-              suffixIcon: const Icon(Icons.check_circle, color: CustomColors.blue500),
             ),
-            keyboardType: TextInputType.number,
+            keyboardType: TextInputType.visiblePassword,
           ),
           const Spacer(), // Mendorong tombol ke bawah
           ElevatedButton(
             onPressed: () {
-              viewModel.nextStep(); // Pindah ke langkah selanjutnya di ViewModel
-              pageController.nextPage( // Pindah halaman di PageView
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeIn,
+              // Lakukan proses akhir registrasi (misal: kirim data ke server)
+              // print('Umur: ${viewModel.age}');
+              // print('Nama: ${viewModel.name}');
+              // print('Email: ${viewModel.email}');
+              // print('Password: ${viewModel.password}');
+              // ... logika kirim data ...
+
+              // Jika berhasil, pindah ke alur personalisasi
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                RouteNames.personalizationIntro, // Arahkan ke rute yang benar
+                (route) => false, // Hapus semua halaman sebelumnya
               );
             },
             style: ElevatedButton.styleFrom(
